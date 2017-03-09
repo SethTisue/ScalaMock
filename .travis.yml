@@ -3,14 +3,16 @@ language: scala
 scala:
   - "2.10.6"
   - "2.11.8"
-  - "2.12.0"
+  - "2.12.1"
 
 jdk:
   - oraclejdk8
-  - oraclejdk7
 
-matrix:
-  exclude:
-  - scala: "2.12.0" 
-    jdk: oraclejdk7
+node_js:
+  - "6"
 
+cache:
+  directories:
+  - "$HOME/.m2"
+  - "$HOME/.ivy2"
+  - "$HOME/.sbt"
